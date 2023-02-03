@@ -99,10 +99,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+    print('Using device:', device)
     
     # Load pretrained model
     model = hmr(config.SMPL_MEAN_PARAMS).to(device)
-    checkpoint = torch.load(args.checkpoint)
+    # checkpoint = torch.load(args.checkpoint)
+    checkpoint = torch.load(args.checkpoint, map_location='cpu')
     model.load_state_dict(checkpoint['model'], strict=False)
 
     # Load SMPL model
