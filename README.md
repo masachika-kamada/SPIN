@@ -23,6 +23,10 @@ If you choose to use a virtual environment, please look at the [instructions](ht
 After finishing with the installation, you can continue with running the demo/evaluation/training code.
 In case you want to evaluate our approach on Human3.6M, you also need to manually install the [pycdf package of the spacepy library](https://pythonhosted.org/SpacePy/pycdf.html) to process some of the original files. If you face difficulties with the installation, you can find more elaborate instructions [here](https://stackoverflow.com/questions/37232008/how-read-common-data-formatcdf-in-python).
 
+* SMLP モデルをダウンロードして、`data/smpl` に配置する
+* [ここ](https://smpl.is.tue.mpg.de/download.php) からサインアップして version 1.0.0 ダウンロードする
+* zip を解凍し、フォルダ内の `basicmodel_m_lbs_10_207_0_v1.0.0.pkl` を `SMPL_NEUTRAL.pkl` にリネームして `data/smpl` に配置する
+
 ## Fetch data
 We provide a script to fetch the necessary data for training and evaluation. You need to run:
 ```
